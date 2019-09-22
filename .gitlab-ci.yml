@@ -1,0 +1,16 @@
+image: gitlab/dind
+
+services:
+  - docker:dind
+
+stages:
+  - build
+  - push
+build:
+  stage: build
+  script:
+    - docker build -t shoorkaii/gitlab-ci-react
+push:
+  stage: push
+  script:
+    - docker push shoorkaii/gitlab-ci-react
