@@ -17,6 +17,10 @@ RUN echo "Installing Dependencies" \
     git-core\
     docker.io \
     npm\
+    gnupg \
+    zlib1g \
+    unzip \
+    wget \
     && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
 RUN echo "Installing Node.JS" \
